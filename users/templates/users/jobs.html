@@ -1,0 +1,14 @@
+{% extends "users/base.html" %}
+{% block title %}Jobs{% endblock %}
+{% block content %}
+<h3>Available Jobs</h3>
+<div class="list-group">
+  {% for job in jobs %}
+    <div class="list-group-item">
+      <h5>{{ job.title }}</h5>
+      <p>{{ job.location }}</p>
+      <button class="btn btn-sm btn-outline-primary">Apply</button>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
